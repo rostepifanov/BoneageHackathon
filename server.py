@@ -10,7 +10,8 @@ logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
 
-model = timm.create_model('efficientnet_b3_pruned.in1k', num_classes=44, pretrained=False)
+model = timm.create_model('tiny_vit_5m_224.dist_in22k', num_classes=44, pretrained=False)
+
 model.eval()
 
 state = torch.load('model.pth')

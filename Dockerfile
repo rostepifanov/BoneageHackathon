@@ -14,6 +14,7 @@ COPY requirements.txt /app/requirements.txt
 RUN pip install -r /app/requirements.txt --no-cache-dir --default-timeout=300
 RUN pip install Werkzeug==2.2.2
 RUN pip install grad-cam
+RUN pip uninstall timm -y && pip install timm==0.9.16 --no-deps
 
 
 
